@@ -8,10 +8,10 @@ import {
 import { Header } from "./components/header";
 import { Route, Routes } from "react-router-dom";
 import { About } from "./about";
-import BusTimetable from "./components/tabs";
+import BusTimetable from "./components/tabs2";
 
 export const ColorModeContext = React.createContext({
-    toggleColorMode: () => {},
+    toggleColorMode: () => { },
 });
 
 export const App = () => {

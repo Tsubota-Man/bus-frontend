@@ -43,7 +43,7 @@ function a11yProps(index: number) {
 
 const getTimetables = async () => {
     // const base = "https://api.bus.oit.yashikota.com/v1/all";
-    const base = "http://150.89.233.32:8080/v1/all" // DEBUG
+    const base = process.env.REACT_APP_API_BASE_URL;
     const query = "?source=app";
     const url = new URL(base + query);
     const response = await fetch(url);
@@ -148,7 +148,7 @@ export default function BusTimetable() {
                     <Clock />
                 </Typography>
                 <Typography variant="subtitle1" align="right">
-                    メンテナンス中です!
+                    にょまかかります!
                 </Typography>
             </Box>
             <Box sx={{ width: "100%" }}>
