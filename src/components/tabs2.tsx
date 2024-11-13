@@ -8,6 +8,8 @@ import Clock from "./clock";
 import { CardComponent } from "./card";
 import type { Bus } from "./card";
 
+const baseURL = import.meta.env.VITE_API_BASE_URL;
+
 interface TabPanelProps {
     children?: React.ReactNode;
     index: number;
@@ -43,7 +45,7 @@ function a11yProps(index: number) {
 
 const getTimetables = async () => {
     // const base = "https://api.bus.oit.yashikota.com/v1/all";
-    const base = process.env.REACT_APP_API_BASE_URL;
+    const base = baseURL;
     const query = "?source=app";
     const url = new URL(base + query);
     const response = await fetch(url);
