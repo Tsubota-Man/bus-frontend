@@ -104,7 +104,7 @@ export default function BusTimetable() {
                     <Clock />
                 </Typography>
                 <Typography variant="subtitle1" align="right">
-                    にょまかかります!
+                    {/* メンテナンス中です */}
                 </Typography>
             </Box>
             <Box
